@@ -1,0 +1,71 @@
+.block_evokehq .groupmember {
+    display: inline-block;
+    background-color: #140f3f;
+    padding: .25rem .25rem;
+    color: #fff;
+    border-radius: 20px;
+}
+
+.block_evokehq .groupmember img {
+    border-radius: 50%;
+}
+
+.block_evokehq .actionbuttons {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1rem 0;
+}
+
+.block_evokehq .actionbuttons .button {
+    width: calc(50% - 1rem);
+    border: 1px solid #d7dfe3;
+    margin: .5rem;
+    padding: 2rem;
+    text-align: center;
+}
+
+.block_evokehq .actionbuttons .button .icon {
+    display: initial;
+}
+
+.block_evokehq .actionbuttons .button .icon img {
+    width: 100px;
+}
+
+.block_evokehq .actionbuttons .button .action {
+    font-size: 2em;
+}
+
+.block_evokehq .actionbuttons .button .action a {
+    color: #140f3f;
+}
+
+#page-blocks-evokehq-groups .groups {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1rem 0;
+}
+
+#page-blocks-evokehq-groups .groups .group {
+    width: calc(50% - 1rem);
+    border: 1px solid #d7dfe3;
+    margin: .5rem;
+    padding: 2rem;
+    text-align: center;
+}
+
+#page-blocks-evokehq-groups .groups .image {
+    display: initial;
+}
+
+#page-blocks-evokehq-groups .groups .image img {
+    width: 100px;
+}
+
+#page-blocks-evokehq-groups .groups .group .action {
+    font-size: 2em;
+}
+
+#page-blocks-evokehq-groups .groups .group .action a {
+    color: #140f3f;
+}

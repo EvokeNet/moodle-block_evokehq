@@ -1,0 +1,14 @@
+<h3>{{{coursename}}}: Course groups</h3>
+
+<div class="groups">
+    {{#groups}}
+        <div class="group">
+            <div class="image">
+                <img src="{{groupimg}}" alt="{{name}}">
+            </div>
+            <div class="action">
+                <a href="{{config.wwwroot}}/blocks/evokehq/portfolios.php?course={{{courseid}}}&group={{{id}}}">{{name}}</a>
+            </div>
+        </div>
+    {{/groups}}
+</div>
