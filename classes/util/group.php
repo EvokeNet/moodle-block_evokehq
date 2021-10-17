@@ -26,26 +26,4 @@ class group {
 
         return array_values($groups);
     }
-
-    public function get_group_members($groupid) {
-        global $PAGE;
-
-        $groupmembers = groups_get_groups_members([$groupid]);
-
-        if (!$groupmembers) {
-            return false;
-        }
-
-        $users = [];
-        foreach ($groupmembers as $groupmember) {
-            $userpicture = new \user_picture($groupmember);
-
-            $users[] = [
-                'userpicture' => $userpicture->get_url($PAGE)->out(),
-                'userfullname' => fullname($groupmember)
-            ];
-        }
-
-        return $users;
-    }
 }

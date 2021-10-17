@@ -15,8 +15,8 @@ defined('MOODLE_INTERNAL') || die();
 use renderable;
 use templatable;
 use renderer_base;
-use block_evokehq\util\group;
 use block_evokehq\util\course;
+use mod_evokeportfolio\util\group;
 
 /**
  * HQ block renderable class.

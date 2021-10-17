@@ -38,3 +38,5 @@ $string['missions'] = 'Missions';
 
 $string['networkcreations'] = 'Network creations';
 
+$string['page_portfolios_title'] = 'Portfolios';
+$string['view'] = 'View';
