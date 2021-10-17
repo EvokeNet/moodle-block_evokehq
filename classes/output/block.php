@@ -15,6 +15,8 @@ defined('MOODLE_INTERNAL') || die();
 use renderable;
 use templatable;
 use renderer_base;
+use block_evokehq\util\group;
+use block_evokehq\util\course;
 
 /**
  * HQ block renderable class.
@@ -37,6 +39,17 @@ class block implements renderable, templatable {
      * @throws \dml_exception
      */
     public function export_for_template(renderer_base $output) {
-        return [];
+        $courseutil = new course();
+        $grouputil = new group();
+
+        $usercourse = $courseutil->get_user_course();
+
+        $groupmembers = $grouputil->get_group_members($usercourse->id);
+
+        return [
+            'courseid' => $usercourse->id,
+            'groupmembers' => $groupmembers,
+            'coursechat' => $courseutil->get_course_chat_link($usercourse->id)
+        ];
     }
 }

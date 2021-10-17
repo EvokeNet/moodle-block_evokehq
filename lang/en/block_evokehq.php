@@ -30,3 +30,11 @@ $string['pluginname'] = 'Headquarters';
 $string['privacy:metadata'] = 'Headquarters does not store any personal data';
 
 $string['page_groups_title'] = 'Course groups';
+$string['myteam'] = 'My team';
+$string['exploreportfolios'] = 'Explore portfolios';
+$string['groupchat'] = 'Group Chat';
+$string['evokation'] = 'Evokation';
+$string['missions'] = 'Missions';
+
+$string['networkcreations'] = 'Network creations';
+

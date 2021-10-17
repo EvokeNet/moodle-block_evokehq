@@ -12,7 +12,7 @@ namespace block_evokehq\output;
 
 defined('MOODLE_INTERNAL') || die();
 
-use block_evokehq\util\course;
+use block_evokehq\util\group;
 use renderable;
 use templatable;
 use renderer_base;
@@ -44,9 +44,9 @@ class groups implements renderable, templatable {
      * @throws \dml_exception
      */
     public function export_for_template(renderer_base $output) {
-        $courseutil = new course();
+        $grouputil = new group();
 
-        $groups = $courseutil->get_course_groups($this->course);
+        $groups = $grouputil->get_course_groups($this->course);
 
         return [
             'courseid' => $this->course->id,

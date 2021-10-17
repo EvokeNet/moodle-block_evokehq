@@ -1,51 +1,44 @@
-<h3>My team</h3>
+<h3>{{#str}}myteam, block_evokehq{{/str}}</h3>
 
 <div class="myteammembers">
+{{#groupmembers}}
     <div class="groupmember">
-        <img src="http://localhost/evoke/theme/image.php/moove/core/1634420790/u/f2" alt="Student One"> Student One
+        <img src="{{{userpicture}}}" alt="{{{userfullname}}}"> {{{userfullname}}}
     </div>
-    <div class="groupmember">
-        <img src="http://localhost/evoke/theme/image.php/moove/core/1634420790/u/f2" alt="Student Three"> Student Three
-    </div>
-    <div class="groupmember">
-        <img src="http://localhost/evoke/theme/image.php/moove/core/1634420790/u/f2" alt="Student Two"> Student Two
-    </div>
-    <div class="groupmember">
-        <img src="http://localhost/evoke/theme/image.php/moove/core/1634420790/u/f2" alt="Tutor One"> Tutor One
-    </div>
+{{/groupmembers}}
 </div>
 
 <div class="actionbuttons">
     <div class="button">
         <div class="icon">
-            <img src="{{config.wwwroot}}/blocks/evokehq/pix/portfolios.png" alt="Group img">
+            <img src="{{config.wwwroot}}/blocks/evokehq/pix/portfolios.png" alt="{{#str}}exploreportfolios, block_evokehq{{/str}}">
         </div>
         <div class="action">
-            <a href="#">Explore portfolios</a>
+            <a href="{{config.wwwroot}}/blocks/evokehq/groups.php?course={{{courseid}}}">{{#str}}exploreportfolios, block_evokehq{{/str}}</a>
         </div>
     </div>
     <div class="button">
         <div class="icon">
-            <img src="{{config.wwwroot}}/blocks/evokehq/pix/chat.png" alt="Group img">
+            <img src="{{config.wwwroot}}/blocks/evokehq/pix/chat.png" alt="{{#str}}groupchat, block_evokehq{{/str}}">
         </div>
         <div class="action">
-            <a href="#">Group Chat</a>
+            <a href="{{{coursechat}}}">{{#str}}groupchat, block_evokehq{{/str}}</a>
         </div>
     </div>
     <div class="button">
         <div class="icon">
-            <img src="{{config.wwwroot}}/blocks/evokehq/pix/evokation.png" alt="Group img">
+            <img src="{{config.wwwroot}}/blocks/evokehq/pix/evokation.png" alt="{{#str}}evokation, block_evokehq{{/str}}">
         </div>
         <div class="action">
-            <a href="#">Evokation</a>
+            <a href="{{{config.wwwroot}}}/course/view.php?id={{courseid}}">{{#str}}evokation, block_evokehq{{/str}}</a>
         </div>
     </div>
     <div class="button">
         <div class="icon">
-            <img src="{{config.wwwroot}}/blocks/evokehq/pix/missions.png" alt="Group img">
+            <img src="{{config.wwwroot}}/blocks/evokehq/pix/missions.png" alt="{{#str}}missions, block_evokehq{{/str}}">
         </div>
         <div class="action">
-            <a href="#">Missions</a>
+            <a href="{{{config.wwwroot}}}/course/view.php?id={{courseid}}">{{#str}}missions, block_evokehq{{/str}}</a>
         </div>
     </div>
 </div>

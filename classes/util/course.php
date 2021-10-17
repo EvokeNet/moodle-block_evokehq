@@ -11,27 +11,27 @@ namespace block_evokehq\util;
  */
 
 class course {
-    public function get_course_groups($course) {
-        global $DB, $CFG;
+    public function get_user_course() {
+        $courses = enrol_get_my_courses();
 
-        $groups = $DB->get_records('groups', ['courseid' => $course->id]);
-
-        if (!$groups) {
+        if (!$courses) {
             return false;
         }
 
-        foreach ($groups as $group) {
-            $pictureurl = get_group_picture_url($group, $course->id, true);
+        return current($courses);
+    }
 
-            if ($pictureurl) {
-                $group->groupimg = $pictureurl->out();
+    public function get_course_chat_link($courseid) {
+        $chatsincourse = get_coursemodules_in_course('chat', $courseid);
 
-                continue;
-            }
-
-            $group->groupimg = $CFG->wwwroot . '/blocks/evokehq/pix/defaultgroupimg.png';
+        if (!$chatsincourse) {
+            return false;
         }
 
-        return array_values($groups);
+        $currentchat = current($chatsincourse);
+
+        $url = new \moodle_url('/mod/chat/view.php', ['id' => $currentchat->id]);
+
+        return $url->out();
     }
 }
