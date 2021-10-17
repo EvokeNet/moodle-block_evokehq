@@ -40,3 +40,5 @@ $string['networkcreations'] = 'Network creations';
 
 $string['page_portfolios_title'] = 'Portfolios';
 $string['view'] = 'View';
+
+$string['page_section_title'] = 'Group submissions';

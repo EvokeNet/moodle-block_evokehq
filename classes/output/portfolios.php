@@ -20,9 +20,9 @@ use templatable;
 use renderer_base;
 
 /**
- * EvokeHQ groups page renderer.
+ * EvokeHQ portfolios page renderer.
  *
- * @package    block_evokehq
+ * @package     block_evokehq
  * @copyright   2021 World Bank Group <https://worldbank.org>
  * @author      Willian Mano <willianmanoaraujo@gmail.com>
  */
