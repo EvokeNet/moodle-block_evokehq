@@ -70,4 +70,13 @@ class block_evokehq extends block_base {
             'my' => true
         ];
     }
+
+    /**
+     * Allow block general configuration
+     *
+     * @return bool
+     */
+    public function has_config() {
+        return true;
+    }
 }

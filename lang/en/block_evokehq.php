@@ -42,3 +42,7 @@ $string['page_portfolios_title'] = 'Portfolios';
 $string['view'] = 'View';
 
 $string['page_section_title'] = 'Group submissions';
+
+$string['configuration'] = 'Evoke HQ block configuration';
+$string['url_chat'] = 'Group Chat URL';
+$string['url_evokation'] = 'Evokation URL';

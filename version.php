@@ -11,8 +11,8 @@
 defined('MOODLE_INTERNAL') || die();
 
 $plugin->component = 'block_evokehq';
-$plugin->release = '0.1.0';
-$plugin->version = 2021092300;
+$plugin->release = '1.0.0';
+$plugin->version = 2021101600;
 $plugin->requires = 2021051700;
 $plugin->maturity = MATURITY_BETA;
 $plugin->dependencies = [

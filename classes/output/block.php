@@ -42,14 +42,29 @@ class block implements renderable, templatable {
         $courseutil = new course();
         $grouputil = new group();
 
+        $config = get_config('block_evokehq');
+
+        $data = [
+            'url_chat' => $config->url_chat ?: false,
+            'url_evokation' => $config->url_evokation ?: false,
+            'issiteadmin' => false
+        ];
+
+        if (is_siteadmin()) {
+            $data['issiteadmin'] = true;
+            $data['courseid'] = false;
+            $data['groupmembers'] = false;
+
+            return $data;
+        }
+
         $usercourse = $courseutil->get_user_course();
 
         $groupmembers = $grouputil->get_group_members($usercourse->id);
 
-        return [
-            'courseid' => $usercourse->id,
-            'groupmembers' => $groupmembers,
-            'coursechat' => $courseutil->get_course_chat_link($usercourse->id)
-        ];
+        $data['courseid'] = $usercourse->id;
+        $data['groupmembers'] = $groupmembers;
+
+        return $data;
     }
 }
