@@ -29,10 +29,10 @@ $string['pluginname'] = 'Headquarters';
 $string['pluginname'] = 'Headquarters';
 $string['privacy:metadata'] = 'Headquarters does not store any personal data';
 
-$string['page_groups_title'] = 'Course groups';
+$string['page_groups_title'] = 'Campaign groups';
 $string['myteam'] = 'My team';
 $string['exploreportfolios'] = 'Explore portfolios';
-$string['groupchat'] = 'Group Chat';
+$string['groupchat'] = 'Team Chat';
 $string['evokation'] = 'Evokation';
 $string['missions'] = 'Missions';
 
@@ -44,12 +44,12 @@ $string['view'] = 'View';
 $string['page_section_title'] = 'Group submissions';
 
 $string['configuration'] = 'Evoke HQ block configuration';
-$string['url_chat'] = 'Group Chat URL';
+$string['url_chat'] = 'Team Chat URL';
 $string['url_evokation'] = 'Evokation URL';
 
 $string['youarenotenrolled'] = 'You are not enrolled in a course!';
 $string['youarenotenrolled_desc'] = 'You need to be enrolled in one course to view the Headquarters info.';
-$string['therearenogroups'] = 'There are no groups in this course';
-$string['coursenoportfolio'] = 'This course doesn\'t have a portfolio';
+$string['therearenogroups'] = 'There are no teams in this course';
+$string['coursenoportfolio'] = 'This course does not have a portfolio';
 $string['nosubmissions'] = 'No submissions!';
-$string['nosubmissions_desc'] = 'There is no submissions from this group yet.';
+$string['nosubmissions_desc'] = 'There are no submissions from this group yet.';
