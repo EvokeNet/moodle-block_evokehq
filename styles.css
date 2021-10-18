@@ -10,6 +10,8 @@
 #page-blocks-evokehq-portfolios .groupmember img,
 .block_evokehq .groupmember img {
     border-radius: 50%;
+    width: 42px;
+    height: 42px;
 }
 
 .block_evokehq .actionbuttons {

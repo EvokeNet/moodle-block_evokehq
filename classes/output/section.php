@@ -63,8 +63,7 @@ class section implements renderable, templatable {
         $sectionutil = new \mod_evokeportfolio\util\section();
         $submissions = $sectionutil->get_section_submissions($this->context, $this->section->id, $groupmembersids);
 
-        $userpicture = new \user_picture($USER);
-        $userpicture->size = 1;
+        $userpicture = theme_moove_get_user_avatar_or_image($USER);
 
         return [
             'courseid' => $this->portfolio->course,
@@ -73,7 +72,7 @@ class section implements renderable, templatable {
             'sectiondescription' => $this->section->description,
             'submissions' => $submissions,
             'hassubmissions' => $submissions != false,
-            'userpicture' => $userpicture->get_url($PAGE)->out(),
+            'userpicture' => $userpicture,
             'userfullname' => fullname($USER),
         ];
     }
