@@ -23,20 +23,6 @@ class course {
         return current($courses);
     }
 
-    public function get_course_chat_link($courseid) {
-        $chatsincourse = get_coursemodules_in_course('chat', $courseid);
-
-        if (!$chatsincourse) {
-            return false;
-        }
-
-        $currentchat = current($chatsincourse);
-
-        $url = new \moodle_url('/mod/chat/view.php', ['id' => $currentchat->id]);
-
-        return $url->out();
-    }
-
     public function get_course_portfolio($courseid) {
         global $DB;
 

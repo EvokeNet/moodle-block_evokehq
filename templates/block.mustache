@@ -1,17 +1,19 @@
-<h3>{{#str}}myteam, block_evokehq{{/str}}</h3>
-
-{{^issiteadmin}}
-    <div class="myteammembers">
-        {{#groupmembers}}
-            <div class="groupmember">
-                <img src="{{{userpicture}}}" alt="{{{userfullname}}}"> {{{fullname}}}
-            </div>
-        {{/groupmembers}}
-    </div>
-{{/issiteadmin}}
+{{#courseid}}
+    {{#hasgroup}}
+        <h3>{{#str}}myteam, block_evokehq{{/str}}</h3>
+        <div class="myteammembers">
+            {{#groupmembers}}
+                <div class="groupmember">
+                    <img src="{{{userpicture}}}" alt="{{{userfullname}}}"> {{{fullname}}}
+                </div>
+            {{/groupmembers}}
+        </div>
+    {{/hasgroup}}
+{{/courseid}}
 
 <!-- Perhaps this would be a good space to insert a "My superpowers" section to graph progress toward superpowers (badges/competencies) and badges awarded  -->
 
+{{#courseid}}
 <div class="actionbuttons">
     <div class="button">
         <div class="icon">
@@ -50,3 +52,10 @@
         </div>
     </div>
 </div>
+{{/courseid}}
+{{^courseid}}
+    <div class="alert alert-warning" role="alert">
+        <h4>{{#str}}youarenotenrolled, block_evokehq{{/str}}</h4>
+        <p class="mb-0">{{#str}}youarenotenrolled_desc, block_evokehq{{/str}}</p>
+    </div>
+{{/courseid}}

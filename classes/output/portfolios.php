@@ -56,6 +56,12 @@ class portfolios implements renderable, templatable {
 
         $portfolio = $courseutil->get_course_portfolio($this->course->id);
 
+        if (!$portfolio) {
+            return [
+                'hasportfolio' => false
+            ];
+        }
+
         $timeremaining = $portfolio->datelimit - time();
 
         $groupgradingmodetext = get_string('groupgrading', 'mod_evokeportfolio');

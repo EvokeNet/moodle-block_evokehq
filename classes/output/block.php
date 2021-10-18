@@ -50,20 +50,29 @@ class block implements renderable, templatable {
             'issiteadmin' => false
         ];
 
+        $usercourse = $courseutil->get_user_course();
+
         if (is_siteadmin()) {
             $data['issiteadmin'] = true;
+        }
+
+        if (is_siteadmin() || !$usercourse) {
             $data['courseid'] = false;
             $data['groupmembers'] = false;
 
             return $data;
         }
 
-        $usercourse = $courseutil->get_user_course();
-
-        $groupmembers = $grouputil->get_group_members($usercourse->id);
-
         $data['courseid'] = $usercourse->id;
-        $data['groupmembers'] = $groupmembers;
+        $data['groupmembers'] = false;
+        $data['hasgroup'] = false;
+
+        $usergroup = $grouputil->get_user_group($usercourse->id);
+
+        if ($usergroup) {
+            $data['groupmembers'] = $grouputil->get_group_members($usercourse->id);
+            $data['hasgroup'] = true;
+        }
 
         return $data;
     }

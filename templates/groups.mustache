@@ -13,3 +13,8 @@
         </div>
     {{/groups}}
 </div>
+{{^groups}}
+    <div class="alert alert-warning" role="alert">
+        <h3>{{#str}}therearenogroups, block_evokehq{{/str}}</h3>
+    </div>
+{{/groups}}

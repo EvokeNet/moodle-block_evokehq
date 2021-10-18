@@ -1,3 +1,4 @@
+{{#hasportfolio}}
 <h2>{{{name}}}</h2>
 
 <div id="intro" class="box py-3 generalbox boxaligncenter">{{{intro}}}</div>
@@ -69,3 +70,9 @@
         </div>
     </div>
 {{/sections}}
+{{/hasportfolio}}
+{{^hasportfolio}}
+    <div class="alert aler-danger" role="alert">
+        <h3>{{#str}}coursenoportfolio, block_evokehq{{/str}}</h3>
+    </div>
+{{/hasportfolio}}
