@@ -46,17 +46,12 @@ class block implements renderable, templatable {
 
         $data = [
             'url_chat' => $config->url_chat ?: false,
-            'url_evokation' => $config->url_evokation ?: false,
-            'issiteadmin' => false
+            'url_evokation' => $config->url_evokation ?: false
         ];
 
         $usercourse = $courseutil->get_user_course();
 
-        if (is_siteadmin()) {
-            $data['issiteadmin'] = true;
-        }
-
-        if (is_siteadmin() || !$usercourse) {
+        if (!$usercourse) {
             $data['courseid'] = false;
             $data['groupmembers'] = false;
 
