@@ -25,8 +25,8 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-$string['pluginname'] = 'Headquarters (Evoke Central)';
-$string['privacy:metadata'] = 'Evoke Central no almacena ningún dato personal';
+$string['pluginname'] = 'Headquarters (Cuarteles Centrales)';
+$string['privacy:metadata'] = 'Headquarters (Cuarteles Centrales) no almacena ningún dato personal';
 
 $string['page_groups_title'] = 'Grupos de la campaña';
 $string['myteam'] = 'Mi equipo';
@@ -42,12 +42,12 @@ $string['view'] = 'Ver';
 
 $string['page_section_title'] = 'Envíos del equipo';
 
-$string['configuration'] = 'Configuración del bloque Evoke Central';
+$string['configuration'] = 'Configuración del bloque Headquarters';
 $string['url_chat'] = 'URL de chat grupal';
 $string['url_evokation'] = 'URL de evocación';
 
 $string['youarenotenrolled'] = '¡No está inscrito en un curso!';
-$string['youarenotenrolled_desc'] = 'Debe estar inscrito en un curso para ver la información del Evoke Central.';
+$string['youarenotenrolled_desc'] = 'Debe estar inscrito en un curso para ver la información del Headquarters.';
 $string['therearenogroups'] = 'No hay equipos en este curso';
 $string['noportfolio'] = 'Esta campaña no tiene un portafolio';
 $string['nosubmissions'] = '¡No hay envíos!';
