@@ -77,6 +77,7 @@ class portfolios implements renderable, templatable {
             'intro' => format_module_intro('evokeportfolio', $portfolio, $this->context->instanceid),
             'datelimit' => userdate($portfolio->datelimit),
             'timeremaining' => format_time($timeremaining),
+            'hasportfolio' => true,
             'cmid' => $portfolio->cmid,
             'groupactivity' => $portfolio->groupactivity,
             'groupgradingmodetext' => $groupgradingmodetext,
