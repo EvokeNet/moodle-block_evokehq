@@ -17,7 +17,19 @@
 <div class="actionbuttons">
     <div class="button">
         <div class="icon">
-            <img src="{{config.wwwroot}}/blocks/evokehq/pix/portfolios.png" alt="{{#str}}exploreportfolios, block_evokehq{{/str}}">
+            <a href="{{{config.wwwroot}}}/course/view.php?id={{courseid}}">
+            <img src="{{config.wwwroot}}/blocks/evokehq/pix/missions.png" alt="{{#str}}missions, block_evokehq{{/str}}">
+            </a>
+        </div>
+        <div class="action">
+            <a href="{{{config.wwwroot}}}/course/view.php?id={{courseid}}">{{#str}}missions, block_evokehq{{/str}}</a>
+        </div>
+    </div>
+    <div class="button">
+        <div class="icon">
+            <a href="{{config.wwwroot}}/blocks/evokehq/groups.php?course={{{courseid}}}">
+                <img src="{{config.wwwroot}}/blocks/evokehq/pix/portfolios.png" alt="{{#str}}exploreportfolios, block_evokehq{{/str}}">
+            </a>
         </div>
         <div class="action">
             <a href="{{config.wwwroot}}/blocks/evokehq/groups.php?course={{{courseid}}}">{{#str}}exploreportfolios, block_evokehq{{/str}}</a>
@@ -26,7 +38,9 @@
     {{#url_chat}}
         <div class="button">
             <div class="icon">
-                <img src="{{config.wwwroot}}/blocks/evokehq/pix/chat.png" alt="{{#str}}groupchat, block_evokehq{{/str}}">
+                <a href="{{{url_chat}}}">
+                    <img src="{{config.wwwroot}}/blocks/evokehq/pix/chat.png" alt="{{#str}}groupchat, block_evokehq{{/str}}">
+                </a>
             </div>
             <div class="action">
                 <a href="{{{url_chat}}}">{{#str}}groupchat, block_evokehq{{/str}}</a>
@@ -36,21 +50,15 @@
     {{#url_evokation}}
         <div class="button">
             <div class="icon">
-                <img src="{{config.wwwroot}}/blocks/evokehq/pix/evokation.png" alt="{{#str}}evokation, block_evokehq{{/str}}">
+                <a href="{{{url_evokation}}}">
+                    <img src="{{config.wwwroot}}/blocks/evokehq/pix/evokation.png" alt="{{#str}}evokation, block_evokehq{{/str}}">
+                </a>
             </div>
             <div class="action">
                 <a href="{{{url_evokation}}}">{{#str}}evokation, block_evokehq{{/str}}</a>
             </div>
         </div>
     {{/url_evokation}}
-    <div class="button">
-        <div class="icon">
-            <img src="{{config.wwwroot}}/blocks/evokehq/pix/missions.png" alt="{{#str}}missions, block_evokehq{{/str}}">
-        </div>
-        <div class="action">
-            <a href="{{{config.wwwroot}}}/course/view.php?id={{courseid}}">{{#str}}missions, block_evokehq{{/str}}</a>
-        </div>
-    </div>
 </div>
 {{/courseid}}
 {{^courseid}}
