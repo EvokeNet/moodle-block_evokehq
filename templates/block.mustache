@@ -14,52 +14,67 @@
 <!-- Perhaps this would be a good space to insert a "My superpowers" section to graph progress toward superpowers (bad  ges/competencies) and badges awarded  -->
 
 {{#courseid}}
-<div class="actionbuttons">
-    <div class="button">
-        <div class="icon">
+    <div class="hqtitle">
+        <h3>welcome at headquarters. what are you looking for?</h3>
+    </div>
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 actionbuttons">
+        <div class="col button">
             <a href="{{{config.wwwroot}}}/course/view.php?id={{courseid}}">
-            <img src="{{config.wwwroot}}/blocks/evokehq/pix/missions.png" alt="{{#str}}missions, block_evokehq{{/str}}">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">{{#str}}missions, block_evokehq{{/str}}</h5>
+                    </div>
+                    <img src="{{config.wwwroot}}/blocks/evokehq/pix/missions.png" class="card-img-top" alt="{{#str}}missions, block_evokehq{{/str}}">
+                    <div class="card-description">
+                        <p>Your magnus opus</p>
+                    </div>
+                </div>
             </a>
         </div>
-        <div class="action">
-            <a href="{{{config.wwwroot}}}/course/view.php?id={{courseid}}">{{#str}}missions, block_evokehq{{/str}}</a>
-        </div>
-    </div>
-    <div class="button">
-        <div class="icon">
-            <a href="{{config.wwwroot}}/blocks/evokehq/groups.php?course={{{courseid}}}">
-                <img src="{{config.wwwroot}}/blocks/evokehq/pix/portfolios.png" alt="{{#str}}exploreportfolios, block_evokehq{{/str}}">
-            </a>
-        </div>
-        <div class="action">
-            <a href="{{config.wwwroot}}/blocks/evokehq/groups.php?course={{{courseid}}}">{{#str}}exploreportfolios, block_evokehq{{/str}}</a>
-        </div>
-    </div>
-    {{#url_chat}}
-        <div class="button">
-            <div class="icon">
-                <a href="{{{url_chat}}}">
-                    <img src="{{config.wwwroot}}/blocks/evokehq/pix/chat.png" alt="{{#str}}groupchat, block_evokehq{{/str}}">
-                </a>
-            </div>
-            <div class="action">
-                <a href="{{{url_chat}}}">{{#str}}groupchat, block_evokehq{{/str}}</a>
-            </div>
-        </div>
-    {{/url_chat}}
-    {{#url_evokation}}
-        <div class="button">
-            <div class="icon">
+        {{#url_evokation}}
+            <div class="col button">
                 <a href="{{{url_evokation}}}">
-                    <img src="{{config.wwwroot}}/blocks/evokehq/pix/evokation.png" alt="{{#str}}evokation, block_evokehq{{/str}}">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">{{#str}}evokation, block_evokehq{{/str}}</h5>
+                        </div>
+                        <img src="{{config.wwwroot}}/blocks/evokehq/pix/evokation.png" class="card-img-top" alt="{{#str}}evokation, block_evokehq{{/str}}">
+                        <div class="card-description">
+                            <p>Check your personal assignments</p>
+                        </div>
+                    </div>
                 </a>
             </div>
-            <div class="action">
-                <a href="{{{url_evokation}}}">{{#str}}evokation, block_evokehq{{/str}}</a>
-            </div>
+        {{/url_evokation}}
+        <div class="col button">
+            <a href="{{config.wwwroot}}/blocks/evokehq/groups.php?course={{{courseid}}}">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">{{#str}}exploreportfolios, block_evokehq{{/str}}</h5>
+                    </div>
+                    <img src="{{config.wwwroot}}/blocks/evokehq/pix/portfolios.png" class="card-img-top" alt="{{#str}}exploreportfolios, block_evokehq{{/str}}">
+                    <div class="card-description">
+                        <p>Check the progress of other agents</p>
+                    </div>
+                </div>
+            </a>
         </div>
-    {{/url_evokation}}
-</div>
+        {{#url_chat}}
+            <div class="col button">
+                <a href="{{{url_chat}}}">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">{{#str}}groupchat, block_evokehq{{/str}}</h5>
+                        </div>
+                        <img src="{{config.wwwroot}}/blocks/evokehq/pix/chat.png" class="card-img-top" alt="{{#str}}groupchat, block_evokehq{{/str}}">
+                        <div class="card-description">
+                            <p>Talk to your team</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        {{/url_chat}}
+    </div>
 {{/courseid}}
 {{^courseid}}
     <div class="alert alert-warning" role="alert">

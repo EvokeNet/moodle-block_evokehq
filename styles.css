@@ -20,28 +20,76 @@
     margin: 1rem 0;
 }
 
-.block_evokehq .actionbuttons .button {
-    width: calc(50% - 1rem);
+.block_evokehq .hqtitle {
     border: 1px solid #d7dfe3;
-    margin: .5rem;
-    padding: 2rem;
+    padding: 1.5rem;
     text-align: center;
 }
 
-.block_evokehq .actionbuttons .button .icon {
-    display: initial;
+.block_evokehq .hqtitle h3 {
+    margin: 0;
 }
 
-.block_evokehq .actionbuttons .button .icon img {
-    width: 100px;
+.block_evokehq .row-cols-1 > * {
+    margin: 0 5px;
+    flex: 0 0 auto;
+    width: calc(100% - 10px);
 }
 
-.block_evokehq .actionbuttons .button .action {
-    font-size: 2em;
+@media (min-width: 576px) {
+    .block_evokehq .row-cols-sm-2 > * {
+        flex: 0 0 auto;
+        width: calc(50% - 10px);
+    }
 }
 
-.block_evokehq .actionbuttons .button .action a {
-    color: #140f3f;
+@media (min-width: 768px) {
+    .block_evokehq .row-cols-md-4 > * {
+        flex: 0 0 auto;
+        width: calc(25% - 10px);
+    }
+}
+
+.block_evokehq .actionbuttons .button {
+    border: 1px solid #d7dfe3;
+    padding: 0;
+}
+
+.block_evokehq .actionbuttons .button a:hover {
+    text-decoration: none;
+}
+
+.block_evokehq .actionbuttons .button .card-body {
+    background-color: #140f3f;
+    padding: 1rem;
+}
+
+.block_evokehq .actionbuttons .button .card-body .card-title {
+    margin: 0;
+    color: #ff0540;
+    text-align: center;
+}
+
+.block_evokehq .actionbuttons .button:hover .card-body {
+    background-color: #ff0540;
+}
+
+.block_evokehq .actionbuttons .button:hover .card-body .card-title {
+    color: #fff;
+}
+
+.block_evokehq .actionbuttons .button img {
+    max-width: 100%;
+}
+
+.block_evokehq .actionbuttons .button .card-description {
+    padding: 1.5rem .5rem;
+}
+
+.block_evokehq .actionbuttons .button .card-description p {
+    margin: 0;
+    text-align: center;
+    font-family: "Bungee", cursive;
 }
 
 #page-blocks-evokehq-groups .groups {
