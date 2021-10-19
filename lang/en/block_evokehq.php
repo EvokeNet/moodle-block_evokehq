@@ -32,9 +32,14 @@ $string['privacy:metadata'] = 'Headquarters does not store any personal data';
 $string['page_groups_title'] = 'Campaign groups';
 $string['myteam'] = 'My team';
 $string['exploreportfolios'] = 'Explore portfolios';
+$string['exploreportfolios_desc'] = 'Check the progress of other agents';
 $string['groupchat'] = 'Team Chat';
+$string['groupchat_desc'] = 'Talk to your team';
 $string['evokation'] = 'Evokation';
+$string['evokation_desc'] = 'Check your personal assignments';
 $string['missions'] = 'Missions';
+$string['missions_desc'] = 'Your magnus opus';
+$string['title'] = 'Welcome at headquarters. what are you looking for?';
 
 $string['networkcreations'] = 'Network creations';
 
