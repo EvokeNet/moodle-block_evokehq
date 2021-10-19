@@ -55,6 +55,10 @@
     padding: 0;
 }
 
+.block_evokehq .actionbuttons .button a {
+    color: #140f3f;
+}
+
 .block_evokehq .actionbuttons .button a:hover {
     text-decoration: none;
 }
