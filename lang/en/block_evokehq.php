@@ -39,7 +39,7 @@ $string['evokation'] = 'Evokation';
 $string['evokation_desc'] = 'Check your personal assignments';
 $string['missions'] = 'Missions';
 $string['missions_desc'] = 'Your magnus opus';
-$string['title'] = 'Welcome at headquarters. what are you looking for?';
+$string['title'] = 'Welcome to headquarters';
 
 $string['networkcreations'] = 'Network creations';
 
