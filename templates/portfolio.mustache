@@ -32,6 +32,13 @@
         </div>
     </div>
 </div>
+
+<div class="navigation">
+    <a class="btn btn-primary" href="{{config.wwwroot}}/blocks/evokehq/portfolios.php?course={{{courseid}}}&group={{{groupid}}}">
+        {{#str}}backtoportfolios, block_evokehq{{/str}}
+    </a>
+</div>
+
 {{^hassubmissions}}
     <div class="alert alert-warning" role="alert">
         <h3>{{#str}}nosubmissions, block_evokehq{{/str}}</h3>

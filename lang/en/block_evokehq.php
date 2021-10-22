@@ -61,3 +61,4 @@ $string['nosubmissions_desc'] = 'There are no submissions from this group yet.';
 
 $string['page_portfolio_title'] = 'Portfolio submissions of a group';
 $string['groupmembers'] = 'Group members';
+$string['backtoportfolios'] = 'Back to portfolios';

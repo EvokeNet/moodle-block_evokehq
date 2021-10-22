@@ -73,6 +73,7 @@ class portfolio implements renderable, templatable {
             'datelimit' => userdate($this->portfolio->datelimit),
             'timeremaining' => format_time($timeremaining),
             'courseid' => $this->portfolio->course,
+            'groupid' => $this->group->id,
             'portfolioname' => $this->portfolio->name,
             'submissions' => $submissions,
             'hassubmissions' => $submissions != false,
