@@ -1,3 +1,37 @@
+<h2>{{{name}}}</h2>
+
+<div id="intro" class="box py-3 generalbox boxaligncenter">{{{intro}}}</div>
+
+<div class="gradingsummary mb-2 p-2" style="border: 1px solid #d7dfe3;">
+    <div class="row">
+        <div class="col-4">
+            <p class="mb-0 font-weight-bold">{{#str}}datelimit, mod_evokeportfolio{{/str}}</p>
+            <p class="mb-0">{{{datelimit}}}</p>
+        </div>
+        <div class="col-4">
+            <p class="mb-0 font-weight-bold">{{#str}}groupactivity, mod_evokeportfolio{{/str}}</p>
+            <p class="mb-0">
+                {{#groupactivity}}
+                    {{#str}}yes{{/str}}
+                {{/groupactivity}}
+                {{^groupactivity}}
+                    {{#str}}no{{/str}}
+                {{/groupactivity}}
+            </p>
+        </div>
+        <div class="col-4">
+            <p class="mb-0 font-weight-bold">{{#str}}page_view_timeremaining, mod_evokeportfolio{{/str}}</p>
+            <p class="mb-0">
+                {{#isdelayed}}
+                    <span class="badge badge-danger">{{{timeremaining}}}</span>
+                {{/isdelayed}}
+                {{^isdelayed}}
+                    {{{timeremaining}}}
+                {{/isdelayed}}
+            </p>
+        </div>
+    </div>
+</div>
 {{^hassubmissions}}
     <div class="alert alert-warning" role="alert">
         <h3>{{#str}}nosubmissions, block_evokehq{{/str}}</h3>

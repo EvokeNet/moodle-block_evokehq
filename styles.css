@@ -1,3 +1,16 @@
+.path-blocks-evokehq .groupinfo .group {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.path-blocks-evokehq .groupinfo .group img {
+    margin-right: .5rem;
+}
+
+.path-blocks-evokehq .groupinfo .group h2 {
+    margin-bottom: 0;
+}
+
 #page-blocks-evokehq-portfolios .groupmember,
 .block_evokehq .groupmember {
     display: inline-block;

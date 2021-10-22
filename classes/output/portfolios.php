@@ -13,6 +13,7 @@ namespace block_evokehq\output;
 defined('MOODLE_INTERNAL') || die();
 
 use block_evokehq\util\course;
+use mod_evokeportfolio\util\group;
 use renderable;
 use templatable;
 use renderer_base;
@@ -49,19 +50,25 @@ class portfolios implements renderable, templatable {
      */
     public function export_for_template(renderer_base $output) {
         $courseutil = new course();
+        $grouputil = new group();
+
+        $data = [
+            'groupname' => $this->group->name,
+            'groupimage' => $grouputil->get_group_image($this->group),
+            'groupmembers' => $grouputil->get_group_members($this->group->id),
+            'hasportfolios' => false,
+            'groupid' => $this->group->id
+        ];
 
         $portfolios = $courseutil->get_course_portfolios($this->course->id);
 
         if (!$portfolios) {
-            return [
-                'hasportfolios' => false
-            ];
+            return $data;
         }
 
-        return [
-            'hasportfolios' => true,
-            'groupid' => $this->group->id,
-            'portfolios' => $portfolios
-        ];
+        $data['hasportfolios'] = true;
+        $data['portfolios'] = $portfolios;
+
+        return $data;
     }
 }

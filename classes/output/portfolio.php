@@ -64,7 +64,14 @@ class portfolio implements renderable, templatable {
 
         $userpicture = theme_moove_get_user_avatar_or_image($USER);
 
+        $timeremaining = $this->portfolio->datelimit - time();
+
         return [
+            'id' => $this->portfolio->id,
+            'name' => $this->portfolio->name,
+            'intro' => format_module_intro('evokeportfolio', $this->portfolio, $this->context->instanceid),
+            'datelimit' => userdate($this->portfolio->datelimit),
+            'timeremaining' => format_time($timeremaining),
             'courseid' => $this->portfolio->course,
             'portfolioname' => $this->portfolio->name,
             'submissions' => $submissions,

@@ -12,7 +12,7 @@ namespace block_evokehq\output;
 
 defined('MOODLE_INTERNAL') || die();
 
-use block_evokehq\util\group;
+use mod_evokeportfolio\util\group;
 use renderable;
 use templatable;
 use renderer_base;

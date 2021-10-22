@@ -1,3 +1,18 @@
+<div class="groupinfo">
+    <div class="group">
+        <img src="{{{groupimage}}}" alt="{{{groupname}}}" style="width: 42px;">
+        <h2>{{{groupname}}}</h2>
+    </div>
+    <h3>{{#str}}groupmembers, block_evokehq{{/str}}</h3>
+    <div class="groupmembers mb-3">
+        {{#groupmembers}}
+            <div class="groupmember">
+                <img src="{{{userpicture}}}" alt="{{{userfullname}}}"> {{{fullname}}}
+            </div>
+        {{/groupmembers}}
+    </div>
+</div>
+
 {{#hasportfolios}}
     {{#portfolios}}
         <div class="card mb-2" style="border: 1px solid #d7dfe3;">
