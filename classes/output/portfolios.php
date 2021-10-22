@@ -13,8 +13,6 @@ namespace block_evokehq\output;
 defined('MOODLE_INTERNAL') || die();
 
 use block_evokehq\util\course;
-use mod_evokeportfolio\util\group;
-use mod_evokeportfolio\util\section;
 use renderable;
 use templatable;
 use renderer_base;
@@ -51,45 +49,19 @@ class portfolios implements renderable, templatable {
      */
     public function export_for_template(renderer_base $output) {
         $courseutil = new course();
-        $sectionutil = new section();
-        $groupsutil = new group();
 
-        $portfolio = $courseutil->get_course_portfolio($this->course->id);
+        $portfolios = $courseutil->get_course_portfolios($this->course->id);
 
-        if (!$portfolio) {
+        if (!$portfolios) {
             return [
-                'hasportfolio' => false
+                'hasportfolios' => false
             ];
         }
 
-        $timeremaining = $portfolio->datelimit - time();
-
-        $groupgradingmodetext = get_string('groupgrading', 'mod_evokeportfolio');
-        if ($portfolio->groupgradingmode == MOD_EVOKEPORTFOLIO_GRADING_INDIVIDUAL) {
-            $groupgradingmodetext = get_string('individualgrading', 'mod_evokeportfolio');
-        }
-
-        $sections = $sectionutil->get_portfolio_sections($portfolio->id);
-
-        $data = [
-            'id' => $portfolio->id,
-            'name' => $portfolio->name,
-            'intro' => format_module_intro('evokeportfolio', $portfolio, $this->context->instanceid),
-            'datelimit' => userdate($portfolio->datelimit),
-            'timeremaining' => format_time($timeremaining),
-            'hasportfolio' => true,
-            'cmid' => $portfolio->cmid,
-            'groupactivity' => $portfolio->groupactivity,
-            'groupgradingmodetext' => $groupgradingmodetext,
+        return [
+            'hasportfolios' => true,
             'groupid' => $this->group->id,
-            'sections' => $sections
+            'portfolios' => $portfolios
         ];
-
-        if ($portfolio->groupactivity) {
-            $data['groupname'] = $this->group->name;
-            $data['groupmembers'] = $groupsutil->get_group_members($this->group->id);
-        }
-
-        return $data;
     }
 }

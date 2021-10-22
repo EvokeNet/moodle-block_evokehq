@@ -1,0 +1,9 @@
+{{^hassubmissions}}
+    <div class="alert alert-warning" role="alert">
+        <h3>{{#str}}nosubmissions, block_evokehq{{/str}}</h3>
+        <p>{{#str}}nosubmissions_desc, block_evokehq{{/str}}</p>
+    </div>
+{{/hassubmissions}}
+{{#hassubmissions}}
+    {{> mod_evokeportfolio/sectionsubmissions }}
+{{/hassubmissions}}

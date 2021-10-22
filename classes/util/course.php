@@ -2,8 +2,6 @@
 
 namespace block_evokehq\util;
 
-use core\plugininfo\portfolio;
-
 /**
  * EvokeHQ course utility class.
  *
@@ -23,21 +21,13 @@ class course {
         return current($courses);
     }
 
-    public function get_course_portfolio($courseid) {
-        global $DB;
-
+    public function get_course_portfolios($courseid) {
         $portfoliosincourse = get_coursemodules_in_course('evokeportfolio', $courseid);
 
         if (!$portfoliosincourse) {
             return false;
         }
 
-        $cm = current($portfoliosincourse);
-
-        $portfolio = $DB->get_record('evokeportfolio', ['id' => $cm->instance], '*', MUST_EXIST);
-
-        $portfolio->cmid = $cm->id;
-
-        return $portfolio;
+        return array_values($portfoliosincourse);
     }
 }
