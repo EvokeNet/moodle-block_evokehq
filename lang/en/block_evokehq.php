@@ -35,10 +35,10 @@ $string['exploreportfolios'] = 'Explore portfolios';
 $string['exploreportfolios_desc'] = 'Check the progress of other agents';
 $string['groupchat'] = 'Team Chat';
 $string['groupchat_desc'] = 'Talk to your team';
-$string['evokation'] = 'Evokation';
-$string['evokation_desc'] = 'Check your personal assignments';
+$string['evokation'] = 'Evokation: Magnus Opus';
+$string['evokation_desc'] = 'Your magnus opus';
 $string['missions'] = 'Missions';
-$string['missions_desc'] = 'Your magnus opus';
+$string['missions_desc'] = 'Check your personal assignments';
 $string['title'] = 'Welcome to headquarters';
 
 $string['networkcreations'] = 'Network creations';
