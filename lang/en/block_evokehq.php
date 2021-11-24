@@ -29,19 +29,19 @@ $string['pluginname'] = 'Headquarters';
 $string['pluginname'] = 'Headquarters';
 $string['privacy:metadata'] = 'Headquarters does not store any personal data';
 
-$string['page_groups_title'] = 'Campaign groups';
+$string['page_groups_title'] = 'Course groups';
 $string['myteam'] = 'My team';
 $string['exploreportfolios'] = 'Explore portfolios';
-$string['exploreportfolios_desc'] = 'Check the progress of other agents';
+$string['exploreportfolios_desc'] = 'Review the of other learners';
 $string['groupchat'] = 'Team Chat';
-$string['groupchat_desc'] = 'Talk to your team';
-$string['evokation'] = 'Evokation: Magnum Opus';
-$string['evokation_desc'] = 'Your magnum opus';
+$string['groupchat_desc'] = 'Talk with your team';
+$string['evokation'] = 'Final project';
+$string['evokation_desc'] = 'Your team\'s big idea';
 $string['missions'] = 'Missions';
 $string['missions_desc'] = 'Check your personal assignments';
 $string['title'] = 'Welcome to headquarters';
 
-$string['networkcreations'] = 'Network creations';
+$string['networkcreations'] = 'Browse portfolios';
 
 $string['page_portfolios_title'] = 'Portfolios';
 $string['view'] = 'View';
@@ -50,7 +50,7 @@ $string['page_section_title'] = 'Group submissions';
 
 $string['configuration'] = 'Evoke HQ block configuration';
 $string['url_chat'] = 'Team Chat URL';
-$string['url_evokation'] = 'Evokation URL';
+$string['url_evokation'] = 'Final project URL';
 
 $string['youarenotenrolled'] = 'You are not enrolled in a course!';
 $string['youarenotenrolled_desc'] = 'You need to be enrolled in one course to view the Headquarters info.';
