@@ -12,7 +12,6 @@ namespace block_evokehq\output;
 
 defined('MOODLE_INTERNAL') || die();
 
-use mod_evokeportfolio\util\group;
 use mod_evokeportfolio\util\evokeportfolio;
 use renderable;
 use templatable;
@@ -51,16 +50,9 @@ class portfolio implements renderable, templatable {
     public function export_for_template(renderer_base $output) {
         global $USER;
 
-        $grouputil = new group();
         $portfolioutil = new evokeportfolio();
 
-        $groupmembers = $grouputil->get_group_members($this->group->id, false);
-        $groupmembersids = [];
-        foreach ($groupmembers as $groupmember) {
-            $groupmembersids[] = $groupmember->id;
-        }
-
-        $submissions = $portfolioutil->get_portfolio_submissions($this->portfolio, $this->context);
+        $submissions = $portfolioutil->get_portfolio_group_submissions($this->portfolio, $this->context, $this->group->id);
 
         $userpicture = theme_moove_get_user_avatar_or_image($USER);
 
