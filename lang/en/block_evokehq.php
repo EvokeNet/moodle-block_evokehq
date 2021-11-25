@@ -41,7 +41,7 @@ $string['missions'] = 'Missions';
 $string['missions_desc'] = 'Check your personal assignments';
 $string['title'] = 'Welcome to headquarters';
 
-$string['networkcreations'] = 'Browse portfolios';
+$string['networkcreations'] = 'Explore portfolios';
 
 $string['page_portfolios_title'] = 'Portfolios';
 $string['view'] = 'View';
