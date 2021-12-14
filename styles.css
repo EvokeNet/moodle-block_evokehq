@@ -1,4 +1,4 @@
-.path-blocks-evokehq .groupinfo .group {
+f.path-blocks-evokehq .groupinfo .group {
     display: flex;
     flex-wrap: wrap;
 }
@@ -19,6 +19,11 @@
     margin: .25rem;
     color: #fff;
     border-radius: 20px;
+}
+
+#page-blocks-evokehq-portfolios .groupmember a,
+.block_evokehq .groupmember a {
+    color: #fff;
 }
 
 #page-blocks-evokehq-portfolios .groupmember img,

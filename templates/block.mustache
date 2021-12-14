@@ -4,7 +4,9 @@
         <div class="myteammembers">
             {{#groupmembers}}
                 <div class="groupmember">
-                    <img src="{{{userpicture}}}" alt="{{{userfullname}}}"> {{{fullname}}}
+                    <a href="{{config.wwwroot}}/local/evokegame/profile.php?id={{courseid}}&userid={{id}}">
+                        <img src="{{{userpicture}}}" alt="{{{userfullname}}}"> {{{fullname}}}
+                    </a>
                 </div>
             {{/groupmembers}}
         </div>
