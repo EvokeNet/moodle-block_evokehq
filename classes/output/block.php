@@ -27,6 +27,12 @@ use mod_evokeportfolio\util\group;
  */
 class block implements renderable, templatable {
 
+    protected $config;
+
+    public function __construct($config) {
+        $this->config = $config;
+    }
+
     /**
      * Export the data.
      *
@@ -39,30 +45,47 @@ class block implements renderable, templatable {
      * @throws \dml_exception
      */
     public function export_for_template(renderer_base $output) {
+        global $COURSE;
+
+        $courseid = $COURSE->id;
+
         $courseutil = new course();
         $grouputil = new group();
 
         $config = get_config('block_evokehq');
 
-        $data = [
-            'url_chat' => $config->url_chat ?: false,
-            'url_evokation' => $config->url_evokation ?: false
-        ];
+        $urlchat = $config->url_chat ?: false;
+        $urlevokation = $config->url_evokation ?: false;
 
-        $usercourse = $courseutil->get_user_course();
-
-        if (!$usercourse) {
-            $data['courseid'] = false;
-            $data['groupmembers'] = false;
-
-            return $data;
+        if (isset($this->config->chat)) {
+            $urlchat = $this->config->chat;
         }
 
-        $data['courseid'] = $usercourse->id;
+        if (isset($this->config->evokation)) {
+            $urlevokation = $this->config->evokation;
+        }
+
+        $data = [
+            'url_chat' => $urlchat,
+            'url_evokation' => $urlevokation
+        ];
+
+        if ($courseid == SITEID) {
+            $usercourse = $courseutil->get_user_course();
+
+            if (!$usercourse) {
+                $data['courseid'] = false;
+                $data['groupmembers'] = false;
+
+                return $data;
+            }
+        }
+
+        $data['courseid'] = $courseid;
         $data['groupmembers'] = false;
         $data['hasgroup'] = false;
 
-        $usergroup = $grouputil->get_user_group($usercourse->id);
+        $usergroup = $grouputil->get_user_group($courseid);
 
         if ($usergroup) {
             $data['groupmembers'] = $grouputil->get_group_members($usergroup->id);

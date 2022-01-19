@@ -18,6 +18,19 @@ class block_evokehq extends block_base {
     }
 
     /**
+     * Controls the block title based on instance configuration
+     *
+     * @return bool
+     */
+    public function specialization() {
+        $title = isset($this->config->title) ? trim($this->config->title) : '';
+
+        if (!empty($title)) {
+            $this->title = format_string($this->config->title);
+        }
+    }
+
+    /**
      * Returns the block contents.
      *
      * @return stdClass The block contents.
@@ -36,7 +49,7 @@ class block_evokehq extends block_base {
 
         $renderer = $this->page->get_renderer('block_evokehq');
 
-        $contentrenderable = new \block_evokehq\output\block();
+        $contentrenderable = new \block_evokehq\output\block($this->config);
 
         $this->content->text = $renderer->render($contentrenderable);
 
@@ -46,28 +59,14 @@ class block_evokehq extends block_base {
     }
 
     /**
-     * Defines configuration data.
-     *
-     * The function is called immediately after init().
-     */
-    public function specialization() {
-
-        // Load user defined title and make sure it's never empty.
-        if (empty($this->config->title)) {
-            $this->title = get_string('pluginname', 'block_evokehq');
-        } else {
-            $this->title = $this->config->title;
-        }
-    }
-
-    /**
      * Sets the applicable formats for the block.
      *
      * @return string[] Array of pages and permissions.
      */
     public function applicable_formats() {
         return [
-            'my' => true
+            'my' => true,
+            'course-view' => true
         ];
     }
 

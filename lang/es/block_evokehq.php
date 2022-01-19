@@ -52,3 +52,7 @@ $string['therearenogroups'] = 'No hay equipos en este curso';
 $string['noportfolio'] = 'Esta campaña no tiene un portafolio';
 $string['nosubmissions'] = '¡No hay envíos!';
 $string['nosubmissions_desc'] = 'Aún no hay envíos de este equipo.';
+
+$string['config_title'] = 'Título del bloque';
+$string['config_chat'] = 'URL de chat grupal';
+$string['config_evokation'] = 'URL de evocación';
