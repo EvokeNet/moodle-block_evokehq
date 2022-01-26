@@ -66,3 +66,6 @@ $string['backtoportfolios'] = 'Back to portfolios';
 $string['config_title'] = 'Block title';
 $string['config_chat'] = 'Team Chat URL';
 $string['config_evokation'] = 'Evokation URL';
+
+$string['page_missions_title'] = 'Missions Map';
+$string['no_missions_map'] = 'There is no mission map into this course.';
