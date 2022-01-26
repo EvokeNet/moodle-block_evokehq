@@ -31,6 +31,7 @@ $PAGE->set_context($context);
 $title = get_string('page_missions_title', 'block_evokehq', $course->fullname);
 $PAGE->set_title($title);
 $PAGE->set_heading($title);
+$PAGE->navbar->add($title);
 
 $output = $PAGE->get_renderer('block_evokehq');
 
