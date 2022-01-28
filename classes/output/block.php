@@ -12,6 +12,7 @@ namespace block_evokehq\output;
 
 defined('MOODLE_INTERNAL') || die();
 
+use block_evokehq\util\missionmap;
 use renderable;
 use templatable;
 use renderer_base;
@@ -52,23 +53,11 @@ class block implements renderable, templatable {
         $courseutil = new course();
         $grouputil = new group();
 
-        $config = get_config('block_evokehq');
+        $blockutil = new \block_evokehq\util\block();
+        $data = $blockutil->get_block_images();
 
-        $urlchat = $config->url_chat ?: false;
-        $urlevokation = $config->url_evokation ?: false;
-
-        if (isset($this->config->chat)) {
-            $urlchat = $this->config->chat;
-        }
-
-        if (isset($this->config->evokation)) {
-            $urlevokation = $this->config->evokation;
-        }
-
-        $data = [
-            'url_chat' => $urlchat,
-            'url_evokation' => $urlevokation
-        ];
+        $data['url_chat'] = $this->config->chat ?? false;
+        $data['url_evokation'] = $this->config->evokation ?? false;
 
         if ($courseid == SITEID) {
             $usercourse = $courseutil->get_user_course();
@@ -90,6 +79,14 @@ class block implements renderable, templatable {
         if ($usergroup) {
             $data['groupmembers'] = $grouputil->get_group_members($usergroup->id);
             $data['hasgroup'] = true;
+        }
+
+        $missionmap = new missionmap();
+        $mapinstanceid = $missionmap->get_course_map($courseid);
+
+        $data['hasmissionmap'] = false;
+        if ($mapinstanceid) {
+            $data['hasmissionmap'] = true;
         }
 
         return $data;

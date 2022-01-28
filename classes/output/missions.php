@@ -12,6 +12,7 @@ namespace block_evokehq\output;
 
 defined('MOODLE_INTERNAL') || die();
 
+use block_evokehq\util\missionmap;
 use renderable;
 use templatable;
 use renderer_base;
@@ -45,31 +46,14 @@ class missions implements renderable, templatable {
      * @throws \dml_exception
      */
     public function export_for_template(renderer_base $output) {
-        global $DB;
+        $missionmap = new missionmap();
+        $mapinstanceid = $missionmap->get_course_map($this->course->id);
 
-        if (!class_exists(\block_mission_map\output\blockintohq::class)) {
+        if (!$mapinstanceid) {
             return ['blockcontent' => false];
         }
 
-        $sql = 'SELECT b.*
-                FROM {block_instances} b
-                INNER JOIN {context} c ON c.id = b.parentcontextid
-                WHERE b.blockname = :blockname AND c.contextlevel = :contextlevel AND instanceid = :courseid';
-        $record = $DB->get_record_sql(
-            $sql,
-            [
-                'blockname' => 'mission_map',
-                'contextlevel' => 50,
-                'courseid' => $this->course->id
-            ]
-        );
-
-        if (!$record) {
-            return ['blockcontent' => false];
-        }
-
-
-        $contentrenderable = new \block_mission_map\output\blockintohq($record->id);
+        $contentrenderable = new \block_mission_map\output\blockintohq($mapinstanceid);
 
         return [
             'blockcontent' => $output->render($contentrenderable)

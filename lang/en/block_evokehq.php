@@ -69,3 +69,10 @@ $string['config_evokation'] = 'Evokation URL';
 
 $string['page_missions_title'] = 'Missions Map';
 $string['no_missions_map'] = 'There is no mission map into this course.';
+
+$string['block_links'] = 'Block links';
+$string['block_images'] = 'Block images';
+$string['img_missions'] = 'Missions image';
+$string['img_evokation'] = 'Evokation image';
+$string['img_portfolios'] = 'Portfolios image';
+$string['img_chat'] = 'Chat image';

@@ -11,9 +11,41 @@
 defined('MOODLE_INTERNAL') || die;
 
 if ($ADMIN->fulltree) {
-    $settings->add(new admin_setting_configtext('block_evokehq/url_chat', get_string('url_chat', 'block_evokehq'),
-        null, null, PARAM_URL));
+    $imagefieldoptions = ['accepted_types' => ['.png', '.jpg', '.svg'], 'maxfiles' => 1];
 
-    $settings->add(new admin_setting_configtext('block_evokehq/url_evokation', get_string('url_evokation', 'block_evokehq'),
-        '', null, PARAM_URL));
+    $settings->add(new admin_setting_configstoredfile(
+        'block_evokehq/img_missions',
+        get_string('img_missions', 'block_evokehq'),
+        '',
+        'img_missions',
+        0,
+        $imagefieldoptions
+    ));
+
+    $settings->add(new admin_setting_configstoredfile(
+        'block_evokehq/img_evokation',
+        get_string('img_evokation', 'block_evokehq'),
+        '',
+        'img_evokation',
+        0,
+        $imagefieldoptions
+    ));
+
+    $settings->add(new admin_setting_configstoredfile(
+        'block_evokehq/img_portfolios',
+        get_string('img_portfolios', 'block_evokehq'),
+        '',
+        'img_portfolios',
+        0,
+        $imagefieldoptions
+    ));
+
+    $settings->add(new admin_setting_configstoredfile(
+        'block_evokehq/img_chat',
+        get_string('img_chat', 'block_evokehq'),
+        '',
+        'img_chat',
+        0,
+        $imagefieldoptions
+    ));
 }
