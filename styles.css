@@ -1,4 +1,8 @@
-f.path-blocks-evokehq .groupinfo .group {
+.pagelayout-incourse .block_evokehq.block {
+    display: none;
+}
+
+.path-blocks-evokehq .groupinfo .group {
     display: flex;
     flex-wrap: wrap;
 }
@@ -14,23 +18,23 @@ f.path-blocks-evokehq .groupinfo .group {
 #page-blocks-evokehq-portfolios .groupmember,
 .block_evokehq .groupmember {
     display: inline-block;
-    background-color: #140f3f;
-    padding: .25rem;
+    background-color: #f1f0f0;
+    padding: .5rem 1rem .5rem .5rem;
     margin: .25rem;
-    color: #fff;
-    border-radius: 20px;
+    color: #000;
+    border-radius: 40px;
 }
 
 #page-blocks-evokehq-portfolios .groupmember a,
 .block_evokehq .groupmember a {
-    color: #fff;
+    color: #000;
 }
 
 #page-blocks-evokehq-portfolios .groupmember img,
 .block_evokehq .groupmember img {
     border-radius: 50%;
-    width: 42px;
-    height: 42px;
+    width: 32px;
+    height: 32px;
 }
 
 .block_evokehq .actionbuttons {
