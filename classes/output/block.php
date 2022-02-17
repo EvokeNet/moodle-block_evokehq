@@ -59,6 +59,14 @@ class block implements renderable, templatable {
         $data['url_chat'] = $this->config->chat ?? false;
         $data['url_evokation'] = $this->config->evokation ?? false;
 
+        $title = get_string('title', 'block_evokehq');
+        $configtitle = isset($this->config->title) ? trim($this->config->title) : '';
+        if (!empty($configtitle)) {
+            $title = format_string($configtitle);
+        }
+
+        $data['title'] = $title;
+
         if ($courseid == SITEID) {
             $usercourse = $courseutil->get_user_course();
 
