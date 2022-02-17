@@ -56,3 +56,6 @@ $string['nosubmissions_desc'] = 'Aún no hay envíos de este equipo.';
 $string['config_title'] = 'Título del bloque';
 $string['config_chat'] = 'URL de chat grupal';
 $string['config_evokation'] = 'URL de evocación';
+
+$string['welcome'] = 'Bienvenido a ';
+

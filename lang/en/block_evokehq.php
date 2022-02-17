@@ -39,7 +39,7 @@ $string['evokation'] = 'Evokation: Magnum Opus';
 $string['evokation_desc'] = 'Your magnum opus';
 $string['missions'] = 'Missions';
 $string['missions_desc'] = 'Check your personal assignments';
-$string['title'] = 'Welcome to headquarters';
+$string['welcome'] = 'Welcome to ';
 
 $string['networkcreations'] = 'Network creations';
 
