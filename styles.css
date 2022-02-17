@@ -96,6 +96,7 @@
     margin: 0;
     color: #ff0540;
     text-align: center;
+    font-family: "Bangers", cursive;
 }
 
 .block_evokehq .actionbuttons .button:hover .card-body {
@@ -117,7 +118,7 @@
 .block_evokehq .actionbuttons .button .card-description p {
     margin: 0;
     text-align: center;
-    font-family: "Bangers", cursive;
+    font-family: 'Permanent Marker', sans-serif;
 }
 
 #page-blocks-evokehq-groups .groups {
