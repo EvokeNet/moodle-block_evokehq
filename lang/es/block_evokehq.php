@@ -58,16 +58,16 @@ $string['noportfolio'] = 'Esta campaña no tiene un portafolio';
 $string['nosubmissions'] = '¡No hay envíos!';
 $string['nosubmissions_desc'] = 'Aún no hay envíos de este equipo.';
 
+$string['page_portfolio_title'] = 'Envíos de portafolios grupales';
+$string['groupmembers'] = 'Miembros del grupo';
+$string['backtoportfolios'] = 'Volver a portafolios';
+
 $string['config_title'] = 'Título del bloque';
 $string['config_chat'] = 'URL de chat grupal';
 $string['config_evokation'] = 'URL de evocación';
 
-$string['config_title'] = 'Block title';
-$string['config_chat'] = 'Team Chat URL';
-$string['config_evokation'] = 'Evokation URL';
-
-$string['page_missions_title'] = 'Mission Map';
-$string['no_missions_map'] = 'There is no mission map into this course.';
+$string['page_missions_title'] = 'Mapa de misiones';
+$string['no_missions_map'] = 'No hay mapa de misiones para este curso.';
 
 $string['block_links'] = 'Block links';
 $string['block_images'] = 'Block images';
@@ -75,4 +75,3 @@ $string['img_missions'] = 'Missions image';
 $string['img_evokation'] = 'Evokation image';
 $string['img_portfolios'] = 'Portfolios image';
 $string['img_chat'] = 'Chat image';
-

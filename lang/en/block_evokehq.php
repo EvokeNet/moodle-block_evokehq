@@ -58,7 +58,7 @@ $string['coursenoportfolio'] = 'This course does not have a portfolio';
 $string['nosubmissions'] = 'No submissions!';
 $string['nosubmissions_desc'] = 'There are no submissions from this group yet.';
 
-$string['page_portfolio_title'] = 'Portfolio submissions of a group';
+$string['page_portfolio_title'] = 'Group portfolio submissions';
 $string['groupmembers'] = 'Group members';
 $string['backtoportfolios'] = 'Back to portfolios';
 
