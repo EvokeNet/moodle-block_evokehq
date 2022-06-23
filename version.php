@@ -14,7 +14,7 @@ $plugin->component = 'block_evokehq';
 $plugin->release = '1.1.0';
 $plugin->version = 2022011700;
 $plugin->requires = 2021051700;
-$plugin->maturity = MATURITY_BETA;
+$plugin->maturity = MATURITY_STABLE;
 $plugin->dependencies = [
     'mod_evokeportfolio' => 2021092200,
 ];

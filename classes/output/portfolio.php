@@ -54,7 +54,7 @@ class portfolio implements renderable, templatable {
 
         $submissions = $portfolioutil->get_portfolio_group_submissions($this->portfolio, $this->context, $this->group->id);
 
-        $userpicture = theme_moove_get_user_avatar_or_image($USER);
+        $userpicture = theme_evoke_get_user_avatar_or_image($USER);
 
         $timeremaining = $this->portfolio->datelimit - time();
 
