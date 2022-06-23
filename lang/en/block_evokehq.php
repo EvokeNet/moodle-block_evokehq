@@ -26,7 +26,6 @@
 defined('MOODLE_INTERNAL') || die();
 
 $string['pluginname'] = 'Headquarters';
-$string['pluginname'] = 'Headquarters';
 $string['privacy:metadata'] = 'Headquarters does not store any personal data';
 
 $string['page_groups_title'] = 'Campaign groups';
@@ -35,8 +34,8 @@ $string['exploreportfolios'] = 'Explore portfolios';
 $string['exploreportfolios_desc'] = 'Check the progress of other agents';
 $string['groupchat'] = 'Team Chat';
 $string['groupchat_desc'] = 'Talk to your team';
-$string['evokation'] = 'Evokation: Magnum Opus';
-$string['evokation_desc'] = 'Your magnum opus';
+$string['evokation'] = 'Evokation: Final Project';
+$string['evokation_desc'] = 'Your final project';
 $string['missions'] = 'Missions';
 $string['missions_desc'] = 'Check your personal assignments';
 $string['welcome'] = 'Welcome to ';
@@ -59,7 +58,7 @@ $string['coursenoportfolio'] = 'This course does not have a portfolio';
 $string['nosubmissions'] = 'No submissions!';
 $string['nosubmissions_desc'] = 'There are no submissions from this group yet.';
 
-$string['page_portfolio_title'] = 'Portfolio submissions of a group';
+$string['page_portfolio_title'] = 'Group portfolio submissions';
 $string['groupmembers'] = 'Group members';
 $string['backtoportfolios'] = 'Back to portfolios';
 
@@ -67,8 +66,8 @@ $string['config_title'] = 'Block title';
 $string['config_chat'] = 'Team Chat URL';
 $string['config_evokation'] = 'Evokation URL';
 
-$string['page_missions_title'] = 'Missions Map';
-$string['no_missions_map'] = 'There is no mission map into this course.';
+$string['page_missions_title'] = 'Mission Map';
+$string['no_missions_map'] = 'There is no mission map for this course.';
 
 $string['block_links'] = 'Block links';
 $string['block_images'] = 'Block images';
