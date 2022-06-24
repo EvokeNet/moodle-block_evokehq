@@ -82,10 +82,10 @@ class block implements renderable, templatable {
         $data['groupmembers'] = false;
         $data['hasgroup'] = false;
 
-        $usergroup = $grouputil->get_user_group($courseid);
+        $usergroups = $grouputil->get_user_groups($courseid);
 
-        if ($usergroup) {
-            $data['groupmembers'] = $grouputil->get_group_members($usergroup->id);
+        if ($usergroups) {
+            $data['groupmembers'] = $grouputil->get_groups_members($usergroups);
             $data['hasgroup'] = true;
         }
 
