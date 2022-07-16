@@ -54,6 +54,10 @@
     margin: 0;
 }
 
+.block_evokehq .card-img-top {
+    border-radius: 0;
+}
+
 .block_evokehq .row-cols-1 > * {
     margin: 0 5px;
     flex: 0 0 auto;
@@ -61,16 +65,16 @@
 }
 
 @media (min-width: 576px) {
-    .block_evokehq .row-cols-sm-2 > * {
+    .block_evokehq .row-cols-sm-1 > * {
         flex: 0 0 auto;
-        width: calc(50% - 10px);
+        width: calc(100% - 10px);
     }
 }
 
 @media (min-width: 768px) {
-    .block_evokehq .row-cols-md-4 > * {
+    .block_evokehq .row-cols-md-3 > * {
         flex: 0 0 auto;
-        width: calc(25% - 10px);
+        width: calc(33% - 10px);
     }
 }
 
