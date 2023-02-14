@@ -44,6 +44,10 @@ class block_evokehq_edit_form extends block_edit_form {
             $mform->addElement('text', 'config_evokation', get_string('config_evokation', 'block_evokehq'));
             $mform->setDefault('config_evokation', '');
             $mform->setType('config_evokation', PARAM_URL);
+
+            $mform->addElement('text', 'config_portfolios', get_string('config_portfolios', 'block_evokehq'));
+            $mform->setDefault('config_portfolios', '');
+            $mform->setType('config_portfolios', PARAM_URL);
         }
     }
 }

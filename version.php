@@ -12,7 +12,7 @@ defined('MOODLE_INTERNAL') || die();
 
 $plugin->component = 'block_evokehq';
 $plugin->release = '1.1.0';
-$plugin->version = 2022011700;
+$plugin->version = 2023021300;
 $plugin->requires = 2021051700;
 $plugin->maturity = MATURITY_STABLE;
 $plugin->dependencies = [

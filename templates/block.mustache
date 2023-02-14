@@ -50,19 +50,21 @@
                 </a>
             </div>
         {{/url_evokation}}
-        <div class="col button">
-            <a href="{{config.wwwroot}}/mod/evokeportfolio/index.php?id={{{courseid}}}">
-                <div class="card">
-                    <div class="card-body">
-                        <h3 class="card-title">{{#str}}exploreportfolios, block_evokehq{{/str}}</h3>
+        {{#url_portfolios}}
+            <div class="col button">
+                <a href="{{{url_portfolios}}}">
+                    <div class="card">
+                        <div class="card-body">
+                            <h3 class="card-title">{{#str}}exploreportfolios, block_evokehq{{/str}}</h3>
+                        </div>
+                        <img src="{{img_portfolios}}" class="card-img-top" alt="{{#str}}exploreportfolios, block_evokehq{{/str}}">
+                        <div class="card-description">
+                            <p>{{#str}}exploreportfolios_desc, block_evokehq{{/str}}</p>
+                        </div>
                     </div>
-                    <img src="{{img_portfolios}}" class="card-img-top" alt="{{#str}}exploreportfolios, block_evokehq{{/str}}">
-                    <div class="card-description">
-                        <p>{{#str}}exploreportfolios_desc, block_evokehq{{/str}}</p>
-                    </div>
-                </div>
-            </a>
-        </div>
+                </a>
+            </div>
+        {{/url_portfolios}}
         {{#url_chat}}
             <div class="col button">
                 <a href="{{{url_chat}}}">

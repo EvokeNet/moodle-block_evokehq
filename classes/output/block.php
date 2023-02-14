@@ -58,6 +58,7 @@ class block implements renderable, templatable {
 
         $data['url_chat'] = $this->config->chat ?? false;
         $data['url_evokation'] = $this->config->evokation ?? false;
+        $data['url_portfolios'] = $this->config->portfolios ?? false;
 
         $title = get_string('pluginname', 'block_evokehq');
         $configtitle = isset($this->config->title) ? trim($this->config->title) : '';
